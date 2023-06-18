@@ -13,12 +13,13 @@ function Dropdown({ options, value, onChange }) {
         setIsOpen(false);
       }
     };
+    console.log(divEl);
     document.addEventListener("click", handler, true);
-    
+
     // Cleanup function
     return () => {
       document.removeEventListener("click", handler);
-      console.log('cleanup')
+      console.log("cleanup");
     };
   }, []);
 
@@ -26,9 +27,10 @@ function Dropdown({ options, value, onChange }) {
     setIsOpen((currentIsOpen) => !currentIsOpen);
   };
 
-  window.timeTwo = performance.now();
+  // window.timeTwo = performance.now();
+
   const handleOptionClick = (option) => {
-    window.timeOne = performance.now();
+    // window.timeOne = performance.now();
     setIsOpen(false);
 
     onChange(option);

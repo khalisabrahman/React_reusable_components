@@ -13,6 +13,8 @@ function DropdownPage() {
   const handleSelect = (option) => {
     setSelection(option);
   };
+
+ 
   return (
     <div className="flex">
       <Dropdown options={options} value={selection} onChange={handleSelect} />
